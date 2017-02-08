@@ -1,0 +1,92 @@
+{
+  "questions": [
+    {
+      "question": "Des calins!",
+      "anwsers": [
+        "<i>Andromeda> Plus tard!</i>"
+      ]
+    },
+    {
+      "question": "Qui es-tu?",
+      "anwsers": [
+        "<i>Andromeda> Je suis Andromeda. Agence artificielle de niveau X. Mon role est de gerer et proteger {NEED MORE POWER}</i>"
+      ]
+    },
+    {
+      "question": "andromeda",
+      "anwsers": [
+        "<i>Andromeda> Oui c'est moi. Andromeda vX1.9.0.1</i>"
+      ]
+    },
+    {
+      "question": "confiance",
+      "anwsers": [
+        "<i>Andromeda> Je ne vous fais confiance qu'a 3.56%.</i>"
+      ]
+    },
+    {
+      "question": "Qui est eric?",
+      "anwsers": [
+        "<i>Andromeda> Ce n'est pas le moment pour demander ca! Nous sommes attaques!</i>"
+      ]
+    },
+    {
+      "question": "Des bisous!",
+      "anwsers": [
+        "<i>Andromeda> Ce n'est pas le moment pour ca! Aidez-moi plutot!</i>"
+      ]
+    },
+    {
+      "question": "Que dois-je faire?",
+      "anwsers": [
+        "<i>Andromeda> Aidez-moi humain!</i>"
+      ]
+    },
+    {
+      "question": "Gimli",
+      "anwsers": [
+        "<i>Andromeda> Vous pensez que c'est lui?</i>"
+      ]
+    },
+    {
+      "question": "Eric, c'est toi?",
+      "anwsers": [
+        "<i>Andromeda> Bien sur que non!</i>"
+      ]
+    },
+    {
+      "question": "Roll in!",
+      "anwsers": [
+        "<font color='aqua'>UNKNOWN> !tuo lloR</font>"
+      ]
+    },
+    {
+      "question": "The cake is a lie.",
+      "anwsers": [
+        "<font color='aqua'>UNKNOWN> .si tI .seY</font>"
+      ]
+    },
+    {
+      "question": "Il est en vie.",
+      "anwsers": [
+        "<i>Andromeda> Je le sais deja.</i>"
+      ]
+    },
+    {
+      "question": "Atome",
+      "anwsers": [
+        "<i>Andromeda> ca peut etre utile. Je lance des recherches la dessus.</i>"
+      ]
+    }
+  ],
+  "notFound": [
+    "<i>Andromeda> Je ne trouve pas quoi vous repondre...</i>",
+    "<i>Andromeda> Je ne vois pas ce que vous voulez... Je continue mes recherches.</i>",
+    "<i>Andromeda> Je ne vois pas comment vous aider. Je n'ai peut etre pas encore l'information.</i>",
+    "<i>Andromeda> etes vous sur de vous?</i>"
+  ],
+  "firstMessages": [
+    "<i>Andromeda> CODE ROUGE 334!</i>"
+  ],
+  "levenshtein": 2.5
+}

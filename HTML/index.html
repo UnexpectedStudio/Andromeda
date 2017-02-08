@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script language="javascript" type="text/javascript">
+		var wsUri = "ws://5.196.135.184:42042/";
+		var closed;
+		var websocket = null;
+
+		function init()
+		{
+		    if (websocket != null && websocket.readyState == websocket.OPEN)
+		    {
+				websocket.close();
+				closed = true;
+		    }
+		    // Initialisation
+		    websocket = new WebSocket(wsUri);
+		    websocket.onopen = function(evt) { onOpen(evt) };
+		    websocket.onclose = function(evt) { onClose(evt) };
+		    websocket.onmessage = function(evt) { onMessage(evt) };
+		    websocket.onerror = function(evt) { onError(evt) };
+		    closed = false;
+		}
+
+		function onOpen(evt)
+		{
+		    console.log("CONNECTED");
+		    writeToConsole("<font color='green'>Console> Connecté à Andromeda.</font>");
+		}
+
+		function onClose(evt)
+		{
+		    console.log("DISCONNECTED");
+			setTimeout(init, 5000);
+		    writeToConsole("<font color='red'>Console> Déconnecté. Reconnexion dans 5 secondes...</font>");
+		}
+
+		function onMessage(evt)
+		{
+			var msg = evt.data;
+			writeToConsole(msg);
+		}
+
+		function onError(evt)
+		{
+		    console.log('ERROR: ' + evt.data);
+			alert("Error: " + evt.data);
+		}
+
+		function send(toSend) {
+			websocket.send(toSend);
+		}
+
+		function writeToConsole(txt) {
+			$("#console").html(txt + "<br />" + $("#console").html());
+		}
+	</script>
+</head>
+<body style="background-color: black;color: white;width: 100%;text-align: center;">
+	<h1 style="color: BlueViolet;">ANDROMEDA</h1>
+	<form id="sender"><input type='text' name='tosend' id="tosend" /><input type='submit' /></form>
+	<div id="console">Connexion à Andromeda...</div>
+	<script>
+	$("#sender").submit(function(event) {
+	  event.preventDefault();
+	  send($("#tosend").val());
+	});
+	init();
+	</script>
+</body>
+</html>
+
